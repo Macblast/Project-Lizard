@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://diausn0y41mgq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4jl6j"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ngd5w"]
+sky_material = SubResource("ProceduralSkyMaterial_4jl6j")
+
+[sub_resource type="Environment" id="Environment_c7aug"]
+background_mode = 2
+sky = SubResource("Sky_ngd5w")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_up0uh"]
+
+[node name="Main" type="Node3D" unique_id=389859701]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=601610273]
+environment = SubResource("Environment_c7aug")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=215091317]
+transform = Transform3D(-0.94608533, -0.29260606, 0.13893959, 0, 0.42893517, 0.9033353, -0.32391745, 0.85463226, -0.40580928, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Panel" type="MeshInstance3D" parent="." unique_id=1785466553]
+transform = Transform3D(32.027687, 0, 0, 0, 0.27689594, 0, 0, 0, 31.69614, 0, 0, 0)
+mesh = SubResource("BoxMesh_up0uh")
+
+[node name="Panel2" type="MeshInstance3D" parent="." unique_id=1129955990]
+transform = Transform3D(32.027687, 0, 0, 0, 3.8805897, 0, 0, 0, 0.2950916, 0, 1.1791892, 15.926117)
+mesh = SubResource("BoxMesh_up0uh")
+
+[node name="Panel3" type="MeshInstance3D" parent="." unique_id=40009425]
+transform = Transform3D(32.027687, 0, 0, 0, 3.8805897, 0, 0, 0, 0.2950916, 0, 1.1791892, -15.709388)
+mesh = SubResource("BoxMesh_up0uh")
+
+[node name="Panel4" type="MeshInstance3D" parent="." unique_id=1448370754]
+transform = Transform3D(-0.0011162553, 0, -0.2950916, 0, 3.8805895, 0, 32.027687, 0, -1.0284775e-05, 15.877615, 1.1791892, -0.08363056)
+mesh = SubResource("BoxMesh_up0uh")
+
+[node name="Panel5" type="MeshInstance3D" parent="." unique_id=1486623066]
+transform = Transform3D(-0.0011162553, 0, -0.2950916, 0, 3.8805895, 0, 32.027687, 0, -1.0284775e-05, -15.79109, 1.1791892, -0.08363056)
+mesh = SubResource("BoxMesh_up0uh")
